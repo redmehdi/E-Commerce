@@ -1,0 +1,26 @@
+logging:
+  level:
+    root: INFO
+spring:
+  h2:
+    console:
+      enabled: false
+  application:
+    name: Pokemon-application
+
+  datasource:
+    url: jdbc:mysql://localhost:6033/pokemon
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: validate
+  jackson:
+    default-property-inclusion: non_null
+  service:
+    aaa:
+      paths:
+        app-public-path: /pokes/**
+  email: redouane@esei.uvigo.es
+  thread-pool: 10
